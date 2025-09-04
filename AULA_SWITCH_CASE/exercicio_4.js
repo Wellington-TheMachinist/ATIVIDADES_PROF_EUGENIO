@@ -21,7 +21,7 @@ let resultado;
 switch(escolha){
     case 1:
         strescolha = "Adição";
-        resultado = numDois+numDois;
+        resultado = numUm+numDois;
         break
         case 2:
             strescolha = "Subtração";
@@ -39,4 +39,4 @@ switch(escolha){
                         resultado = 0;
 
 }
-console.log(" A operação de "+strescolha)
+console.log(" A operação de "+strescolha+" com os números :"+numUm+" e "+numDois+" corresponde a : "+resultado);
