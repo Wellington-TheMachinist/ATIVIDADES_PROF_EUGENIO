@@ -3,12 +3,11 @@
 inverta, escrevendo o número lido e o invertido.
 */
 
-let numero1 = 592;
+let numero1 = 359;
 
 function inverterNumero(valor1){
-    let val1=Math.trunc((valor1%100)%10);
-    let val2 = Math.trunc((valor1%100)/10);
-    let val3 = Math.trunc(valor1/100);
-    return val1*100+val2*10+val3;
+    let val1=(Math.trunc((valor1%100)%10)*100)+Math.trunc((valor1%100)/10)*10+Math.trunc(valor1/100);
+    
+    return val1;
 }
 console.log(inverterNumero(numero1));
