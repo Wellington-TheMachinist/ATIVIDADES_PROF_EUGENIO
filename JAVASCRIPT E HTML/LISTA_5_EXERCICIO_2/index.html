@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    2. Desenvolver um algoritmo para calcular e imprimir o preço
+final de um carro. O valor do preço inicial de fábrica é
+fornecido por um meio de entrada. O carro pode ter as
+seguintes opções:
+• (S,N) Ar condicionado: R$ 1750,00
+• (S,N) Pintura Metálica: R$ 800,00
+• (S,N) Vidro Elétrico: R$ 1200,00
+• (S,N) Direção Hidráulica: R$ 2000,00.
+• Obs.: Usuário ideal - ele não irá digitar valores
+incorretos.-->
+<h1 style="text-align: center;">PROGRAMA CALCULAR VALOR FINAL DE UM CARRO</h1><hr>    
+
+<form ><h2>
+    <p>VALOR INICIAL DO CARRO : <input type="text" id="idInValorInicial" placeholder="digite o valor do carro"></p>
+    <p>ESCOLHA AS SEGUINTES OPÇÕES :</p>
+    
+       
+    </select>
+    <p></p>
+    <label for="idInAr">AR CONDICIONADO</label>
+    <select  id="idInAr">
+        <option value="TRUE">SIM</option>
+        <option value="FALSE">NÃO</option>
+    </select><p></p>
+    <label for="idInPintura">PINTURA</label>
+    <select id="idInPintura">
+        <option value="TRUE">SIM</option>
+        <option value="FALSE">NÃO</option>
+    </select><p></p>
+    <label for="idInVidro">VIDRO ELÉTRICO</label>
+    <select  id="idInVidro">
+        <option value="TRUE">SIM</option>
+        <option value="FALSE">NÃO</option>
+    </select><p></p>
+    <label for="idInDirecao">DIREÇÃO HIDRÁULICA</label>
+    <select  id="idInDirecao">
+        <option value="TRUE">SIM</option>
+        <option value="FALSE">NÃO</option>
+    </select><p></p>
+    <p><input type="button" id="btnTeste" value="CALCULAR" onclick="testar()"></p>
+    <p id="outTexto"></p>
+</h2></form>
+<script src="programa.js"></script>
+</body>
+</html>
