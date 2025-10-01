@@ -42,4 +42,6 @@ function testar(){
     const valorFinalCarro = calcularValorCarro(Number(valorCarroC.value),arC.value,pinturaC.value,vidroC.value,direcaoC.value);
 
     saidaa.innerText = "O valor final do carro será : R$" +valorFinalCarro;
+
+    alert(""+saidaa.innerText)
 }

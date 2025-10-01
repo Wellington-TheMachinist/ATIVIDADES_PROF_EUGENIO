@@ -1,0 +1,15 @@
+h1 {
+background-color: aqua;
+color: blue;
+}
+
+.classe-teste{
+    color: brown;
+}
+
+#btnTeste{
+    background-color: hotpink;
+    color: cyan;
+    border: 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+<!--
+3. Fazer um algoritmo que leia um número inteiro positivo, calcule e
+escreva todos os divisores deste.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMA MOSTRAR DIVISORES DE UM NUMERO</title>
+</head>
+<body>
+    <h1>PROGRAMA PARA MOSTRAR DIVISORES DE UM NÚMERO</h1><hr>
+    <form><h2>
+        <p>DIGITE UM NÚMERO INTEIRO POSITIVO QUALQUER : <input type="number" id="idInNumero"></p>
+        
+        <label for="idInTipo">ESCOLHA A ESTRUTURA DE REPETICAO :</label>
+        <select name="estrutura" id="idInTipo">
+            <option value="FOR">FOR</option>
+            <option value="WHILE">WHILE</option>
+            <option value="DOWHILE">DO WHILE</option>
+        </select>
+        <p><input type="button" value="VERIFICAR" id="btnVerificar" onclick="verificarDivisores()" ></p>
+        <p id="idOutTexto"></p>
+    </h2></form>
+    <script src="programa.js"></script>
+</body>
+</html>

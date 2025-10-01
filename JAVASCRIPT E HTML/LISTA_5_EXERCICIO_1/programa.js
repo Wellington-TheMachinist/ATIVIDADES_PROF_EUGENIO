@@ -13,4 +13,5 @@ function verificarNumero(numero){
 function mostrarNumero(){
     const saida = "O número "+numeroC.value+verificarNumero(Number(numeroC.value));
     resultadoC.innerText = saida;
+    
 }
