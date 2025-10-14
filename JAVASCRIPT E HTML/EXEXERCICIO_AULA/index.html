@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO DA LOCADORA</title>
+</head>
+<body>
+    <h1>LOCADORA LOCGYN</h1>
+
+    <form><h2>
+<p>PREÇO DO FILME : <input type="number" id="idInPreco"></p>
+<p>DIA DA SEMANA : <input type="number" id="idInDiaSemana"></p>
+
+<label for="idInTipoFilme">TIPO DO FILME</label>
+<select name="tipoFilme" id="idInTipoFilme">
+    <option value="1">LANÇAMENTO</option>
+    <option value="2">COMUM</option>
+</select>
+<p><input type="button" value="verificar" id="btnVerificar"  onclick="mostrarDados()"></p>
+<p id="idOutTexto"></p>
+    </h2></form>
+    
+
+    <script src="programa.js"></script>
+</body>
+</html>

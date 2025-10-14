@@ -4,7 +4,7 @@ const resultadoC = document.getElementById("idOutTexto");
 
 
 
-// Função para calcular seno aproximado usando série de Maclaurin
+
 function senoMaclaurin(a) {
     return a - (Math.pow(a, 3) / 6) 
              + (Math.pow(a, 5) / 120) 

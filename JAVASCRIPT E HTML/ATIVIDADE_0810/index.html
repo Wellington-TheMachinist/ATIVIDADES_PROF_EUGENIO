@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROGRAMA USANDOO COMBOBOX</h1><hr>
+
+    <form >
+        <h2>
+            <p>DIGITE UM NÚMERO : <input type="number" id="idInNumero"></p>
+            <p></p>
+            <label for="idInOperacao">ESCOLHA A FUNÇÃO QUE É PRA RODAR : </label>
+            <select name="operacao" id="idInOperacao">
+                <option value="1">NÚMEROS PRIMOS</option>
+                <option value="2">NÚMERO PERFEITO</option>
+                <option value="3">NÚMERO TRIANGULAR</option>
+                <option value="4">FATORIAL</option>
+                <option value="5">CARACTERÍSTICA</option>
+            </select>
+            <p><input type="button" value="VERIFICAR" onclick="mostrarDados()"></p>
+            <p id="idOutResultado"></p>
+        </h2>
+    </form>
+    <script src="programa.js"></script>
+</body>
+</html>
