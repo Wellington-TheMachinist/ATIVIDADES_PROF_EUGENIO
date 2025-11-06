@@ -22,7 +22,7 @@ function gerarValorAleatorio(){
 
 
 
-function gerarVetorUm(arrayUm){
+function gerarVetorUm(){
    
     arrayUm = gerarValorAleatorio();
 
@@ -31,7 +31,7 @@ function gerarVetorUm(arrayUm){
     return arrayUm;
 }
 
-function gerarVetorDois(arrayDois){
+function gerarVetorDois(){
     
     arrayDois = gerarValorAleatorio();
 
@@ -42,20 +42,38 @@ function gerarVetorDois(arrayDois){
 
 
 
+function buscar(arrayDois,numero){
+    for(let aux = 0;aux<arrayDois.length;aux++){
+           if(arrayDois[aux]==numero){
+            return true;
+           }
+}
+return false;
+}
 
+function verificarIdentidade(arrayUm,arrayDois){
+    for(let auxi=0;auxi<arrayUm.length;auxi++){
+        if(buscar(arrayDois,arrayUm[auxi])=== false) return false;
+    }
+    return true;
+}
+
+
+
+/*
 function CompararVetores(vetor1,vetor2){
     let vetorUm= vetor1;
     let vetorDois = vetor2;
     let contador=0;
-for(let aux = 0;aux<2;aux++){
-    for(let ina=0;ina<2;ina++){
-    console.log(vetor1[aux]+" vs "+vetor2[ina]);
+        for(let aux = 0;aux<2;aux++){
+            for(let ina=0;ina<2;ina++){
+               console.log(vetor1[aux]+" vs "+vetor2[ina]);
     
-    if(vetorUm[aux]==vetorDois[ina]){
-     contador++;
-     vetorDois[ina]=100;
-    }   
+               if(vetorUm[aux]==vetorDois[ina]){
+               return true;
+               }   
 }
+               return false;
 }
 if(contador==2){
 return arrayUm+" e "+arrayDois+" são identicos.";
@@ -65,10 +83,10 @@ return arrayUm+" e "+arrayDois+" não são identicos.";
 
 
 }
+*/
 function mostrarResultado(){
-     gerarVetorUm(arrayUm);
-     gerarVetorDois(arrayDois);
-    //saidaResultadoC.innerText=CompararVetores(arrayUm,arrayDois);
+    
+    saidaResultadoC.innerText=verificarIdentidade(arrayUm,arrayDois);
 
   
 }
