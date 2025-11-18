@@ -1,0 +1,31 @@
+h3{
+    color: chartreuse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.classe{
+
+    background-color: cornflowerblue;
+    color: darkmagenta;
+
+}
+
+#id{
+background-color: aqua;
+
+}
+
+#titulo{
+    color: cadetblue;
+    text-align: center;
+}
+
+#botao{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    color: aliceblue;
+    cursor: pointer;
+}

@@ -5,95 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoritmo Genético - Expressão Genética</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .container { max-width: 800px; margin: auto; }
-        .config-group { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="number"], select { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
-        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; }
-        button:hover { background-color: #0056b3; }
-        #resultados { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
-        .resultado-geracao { margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 5px; }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f7f6; color: #333; }
+        .container { max-width: 900px; margin: auto; background-color: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h1, h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 5px; margin-top: 20px; }
+        .config-group { margin-bottom: 25px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #f9f9f9; }
+        label { display: block; margin-top: 10px; margin-bottom: 5px; font-weight: bold; color: #555; }
+        input[type="number"], select { width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 12px 20px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; margin-top: 20px; transition: background-color 0.3s; }
+        button:hover { background-color: #1e7e34; }
+        #resultados { margin-top: 30px; padding-top: 15px; }
+        #melhorGlobal { background-color: #e9f7ef; padding: 15px; border: 1px solid #28a745; border-radius: 5px; margin-bottom: 20px; }
+        .resultado-geracao { margin-bottom: 5px; padding: 3px 0; font-size: 0.9em; border-bottom: 1px dotted #ccc; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1> Simulação Genética em Itaberaí</h1>
+       <img src="R.png" alt="" style="justify-content: center;width: 650px;">
+        <h1 style="text-align: center;">INTELIGÊNCIA ARTIFICIAL</h1>
+        <h2 style="text-align: center;">PROFESSOR GUSTAVO</h2>
+        <h3 style="text-align: center;">GRUPO COMPOSTO POR :</h3>
+        <h2 style="text-align: center;">BRUNO BUENO, JÉSSICA, LUIS FERNANDO, WARLEY E WELLINGTON JR</h2><hr>
+        <h1 style="text-align: center;">ALGORITMO GENÉTICO</h1>
+        <p style="font-size: larger;">Os algoritmos genéticos são importantes porque simulam o processo de evolução natural para resolver problemas complexos de otimização.
+             Inspirados na seleção natural, eles usam operações como cruzamento, mutação e seleção para gerar soluções cada vez melhores. Essa abordagem
+              é valiosa quando métodos tradicionais são ineficazes, pois consegue explorar grandes espaços de busca e encontrar respostas aproximadas de alta qualidade.</p>
+        <img src="image.png" alt="" style="justify-content: center;width: 850px;">
+        <img src="centralpark.png" alt="" style="justify-content: center;width: 850px;">
+        <img src="ciclo.png" alt="" style="justify-content: center;width: 850px;">
+        <img src="Captura de tela 2025-11-06 170356.png" alt="" style="justify-content: center;width: 850px;">
+        <img src="Captura de tela 2025-11-06 170731.png" alt="" style="justify-content: center;width: 850px;">
+        <h1 style="text-align: center;"> LABORATÓRIO TABELÃO DE ITABERAÍ - GO</h1>
         <p>A meta é encontrar a sequência de genes ($x_i=1$ para ativo) com a máxima expressão total ($f(x) = \sum x_i$).</p>
 
         <div class="config-group">
-            <h2>Configurações do Algoritmo Genético</h2>
+            <h2>Configurações do AG</h2>
             
             <label for="nGenes">Número de Genes (Tamanho do Cromossomo $n$):</label>
-            <input type="number" id="nGenes" value="20" min="5">
+            <input type="number" id="nGenes" value="30" min="5">
 
             <label for="tamanhoPopulacao">a. Tamanho da População:</label>
-            <input type="number" id="tamanhoPopulacao" value="50" min="10">
+            <input type="number" id="tamanhoPopulacao" value="100" min="10">
 
             <label for="numGeracoes">b. Quantidade de Gerações:</label>
-            <input type="number" id="numGeracoes" value="100" min="1">
+            <input type="number" id="numGeracoes" value="150" min="1">
 
             <label for="elitismoTipo">c. Elitismo:</label>
             <select id="elitismoTipo">
-                <option value="total">Total (100% dos melhores passam)</option>
-                <option value="parcial" selected>Parcial (Apenas uma porcentagem passa)</option>
+                <option value="total">Total (1 melhor passa)</option>
+                <option value="parcial" selected>Parcial (Porcentagem passa)</option>
             </select>
             
-            <label for="porcentagemElitismo" id="labelPorcentagemElitismo">Porcentagem da População que VAI para o Elitismo (ex: 10%):</label>
-            <input type="number" id="porcentagemElitismo" value="10" min="0" max="100">
+            <div id="divPorcentagemElitismo">
+                <label for="porcentagemElitismo" id="labelPorcentagemElitismo">Porcentagem da População que VAI para o Elitismo (ex: 10%):</label>
+                <input type="number" id="porcentagemElitismo" value="10" min="0" max="100">
+            </div>
 
-            <label for="tipoSelecao">d. Tipo de Seleção:</label>
+            <label for="tipoSelecao">d. Tipos de Seleção:</label>
             <select id="tipoSelecao">
-                <option value="roleta" selected>Roleta</option>
+                <option value="roleta">Roleta</option>
                 <option value="ranking">Ranking</option>
-                <option value="torneio">Torneio</option>
+                <option value="torneio" selected>Torneio</option>
             </select>
             
-            <label for="tamanhoTorneio" id="labelTamanhoTorneio" style="display:none;">Tamanho do Torneio ($k$):</label>
-            <input type="number" id="tamanhoTorneio" value="3" min="2" style="display:none;">
+            <div id="divTamanhoTorneio" style="display: block;">
+                <label for="tamanhoTorneio" id="labelTamanhoTorneio">Tamanho do Torneio ($k$):</label>
+                <input type="number" id="tamanhoTorneio" value="5" min="2">
+            </div>
             
             <label for="tipoCruzamento">e. Tipo de Cruzamento:</label>
             <select id="tipoCruzamento">
-                <option value="umPonto" selected>Um Ponto</option>
-                <option value="multiponto">Multiponto</option>
+                <option value="umPonto">Um Ponto</option>
+                <option value="multiponto" selected>Multiponto</option>
             </select>
             
-            <label for="numPontosCruzamento" id="labelNumPontosCruzamento" style="display:none;">Quantidade de Pontos de Cruzamento:</label>
-            <input type="number" id="numPontosCruzamento" value="2" min="2" style="display:none;">
+            <div id="divNumPontosCruzamento" style="display: block;">
+                <label for="numPontosCruzamento" id="labelNumPontosCruzamento">Quantidade de Pontos de Cruzamento (ex: 3):</label>
+                <input type="number" id="numPontosCruzamento" value="3" min="2">
+            </div>
 
             <label for="taxaMutacao">f. Taxa de Mutação (0.0 a 1.0, ex: 0.01):</label>
             <input type="number" id="taxaMutacao" value="0.01" min="0" max="1" step="0.001">
             
-            <button onclick="iniciarAG()">Iniciar Simulação</button>
+            <button onclick="iniciarAG()">🚀 Iniciar Simulação</button>
         </div>
 
         <div id="resultados">
-            <h2>Resultados</h2>
-            <div id="melhorGlobal"></div>
-            <div id="logResultados"></div>
+            <h2>Resultados da Otimização</h2>
+            <div id="melhorGlobal">Aguardando a execução...</div>
+            <h3>Histórico de Gerações:</h3>
+            <div id="logResultados" style="max-height: 300px; overflow-y: scroll; border: 1px solid #eee; padding: 10px;"></div>
         </div>
     </div>
 
     <script>
-        // Lógica de interface para mostrar/esconder campos
+        // Lógica de interface para mostrar/esconder campos baseado na seleção
         document.getElementById('elitismoTipo').addEventListener('change', function() {
             const isParcial = this.value === 'parcial';
-            document.getElementById('labelPorcentagemElitismo').style.display = isParcial ? 'block' : 'none';
-            document.getElementById('porcentagemElitismo').style.display = isParcial ? 'block' : 'none';
+            document.getElementById('divPorcentagemElitismo').style.display = isParcial ? 'block' : 'none';
         });
 
         document.getElementById('tipoSelecao').addEventListener('change', function() {
             const isTorneio = this.value === 'torneio';
-            document.getElementById('labelTamanhoTorneio').style.display = isTorneio ? 'block' : 'none';
-            document.getElementById('tamanhoTorneio').style.display = isTorneio ? 'block' : 'none';
+            document.getElementById('divTamanhoTorneio').style.display = isTorneio ? 'block' : 'none';
         });
 
         document.getElementById('tipoCruzamento').addEventListener('change', function() {
             const isMultiponto = this.value === 'multiponto';
-            document.getElementById('labelNumPontosCruzamento').style.display = isMultiponto ? 'block' : 'none';
-            document.getElementById('numPontosCruzamento').style.display = isMultiponto ? 'block' : 'none';
+            document.getElementById('divNumPontosCruzamento').style.display = isMultiponto ? 'block' : 'none';
         });
     </script>
-    <script src="pograma.js"></script>
+    <script src="pog.js"></script>
 </body>
 </html>

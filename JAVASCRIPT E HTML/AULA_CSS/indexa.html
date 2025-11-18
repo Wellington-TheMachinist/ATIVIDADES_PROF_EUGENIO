@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Redes de Computadores - UEG</title>
+    <!-- Carregamento do Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração customizada do Tailwind para usar a fonte Inter e cores profissionais -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --color-primary: #1e3a8a; /* Azul escuro/Índigo - Profissional */
+            --color-secondary: #3b82f6; /* Azul claro - Destaque */
+            --color-accent: #10b981; /* Verde esmeralda - Sucesso/Status */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Gray 50 */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        secondary: 'var(--color-secondary)',
+                        accent: 'var(--color-accent)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Seção Principal (Hero) -->
+    <header class="bg-primary text-white shadow-xl">
+        <div class="container mx-auto p-6 md:p-12 text-center">
+            <h4 class="text-lg md:text-xl font-medium opacity-80 mb-2">
+                Universidade Estadual de Goiás (UEG)
+            </h4>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                PROJETO DE REDES DE COMPUTADORES
+            </h1>
+            <p class="xl md:text-2xl font-light opacity-90">
+                Curso: Sistemas de Informação
+            </p>
+        </div>
+    </header>
+
+    <!-- Detalhes do Projeto e Equipe -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card do Professor -->
+                <div class="bg-blue-50 border-l-4 border-secondary p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Professor da Disciplina</h2>
+                    <p class="text-3xl font-extrabold text-secondary">
+                        Roberto de Urzeda Paiva
+                    </p>
+                    <p class="text-gray-500 mt-1">Disciplina: Redes de Computadores</p>
+                </div>
+
+                <!-- Card da Dupla -->
+                <div class="bg-green-50 border-l-4 border-accent p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Dupla de Desenvolvedores</h2>
+                    <p class="text-3xl font-extrabold text-accent">
+                        Jéssica e Wellington
+                    </p>
+                    <p class="text-gray-500 mt-1">Implementação e Documentação</p>
+                </div>
+
+                <!-- Card de Resumo -->
+                <div class="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Objetivo Central</h2>
+                    <p class="text-lg text-gray-600">
+                        Demonstração prática de uma infraestrutura de rede heterogênea, integrando servidores corporativos e dispositivos IoT em um ambiente controlado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Técnicas Detalhadas -->
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-12">
+                Arquitetura e Componentes da Rede
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Componente 1: Servidor Windows (Atualizado) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary transform hover:scale-[1.02] transition duration-300">
+                    <!-- Icone de Servidor (Inline SVG) -->
+                    <svg class="w-12 h-12 mx-auto mb-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Servidor Principal</h3>
+                    <p class="text-sm text-gray-600 font-semibold mb-2">Windows Server</p>
+                    <ul class="text-left text-sm text-gray-700 space-y-1 list-disc pl-5">
+                        <li>Gateway da Rede.</li>
+                        <li>Serviços DHCP e DNS.</li>
+                        <li>Hospeda a Landing Page principal (Esta página).</li>
+                        <li>Oferece Serviço HTTP (IIS) para clientes.</li>
+                    </ul>
+                </div>
+
+                <!-- Componente 2: Roteador Antigo (AP/Switch) - ATUALIZADO -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary transform hover:scale-[1.02] transition duration-300">
+                    <!-- Icone de Roteador (Inline SVG) -->
+                    <svg class="w-12 h-12 mx-auto mb-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2zM12 4v2m-4 6h8m-4 4h4"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ponto de Acesso (AP)</h3>
+                    <p class="text-sm text-gray-600 font-semibold mb-2">Roteador Desativado</p>
+                    <ul class="text-left text-sm text-gray-700 space-y-1 list-disc pl-5">
+                        <li>DHCP desativado (atribuído pelo Servidor).</li>
+                        <li>Serve como Ponto de Acesso (AP) principal (Wi-Fi).</li>
+                        <li>Opera também como Switch LAN para dispositivos cabeados.</li>
+                    </ul>
+                </div>
+
+                <!-- Componente 3: Arduino (Serviço HTTP Fixo) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-accent transform hover:scale-[1.02] transition duration-300">
+                    <!-- Icone de Microcontrolador (Inline SVG) -->
+                    <svg class="w-12 h-12 mx-auto mb-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10a1 1 0 011-1h12a1 1 0 011 1v4a1 1 0 01-1 1H6a1 1 0 01-1-1v-4z"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Dispositivo de Borda (IoT)</h3>
+                    <p class="text-sm text-gray-600 font-semibold mb-2">Arduino (Conexão via LAN)</p>
+                    <ul class="text-left text-sm text-gray-700 space-y-1 list-disc pl-5">
+                        <li>Conectado diretamente ao Switch/Roteador.</li>
+                        <li>Oferece um serviço HTTP de teste.</li>
+                        <li>Demonstração de integração cabeada de IoT.</li>
+                    </ul>
+                </div>
+                
+                <!-- Componente 4: ESP32 (Serviço HTTP Wi-Fi) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-purple-500 transform hover:scale-[1.02] transition duration-300">
+                    <!-- Icone de Sinal Wi-Fi (Inline SVG) -->
+                    <svg class="w-12 h-12 mx-auto mb-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Servidor Web Sem Fio</h3>
+                    <p class="text-sm text-gray-600 font-semibold mb-2">ESP32 (Conexão via Wi-Fi)</p>
+                    <ul class="text-left text-sm text-gray-700 space-y-1 list-disc pl-5">
+                        <li>Conectado à rede Wi-Fi do Roteador/AP.</li>
+                        <li>Oferece páginas HTTP demonstrativas.</li>
+                        <li>Valida a conectividade sem fio com o Servidor.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fluxo de Comunicação (Diagrama em Texto/Estrutura) - ATUALIZADO -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-primary mb-6">
+                Fluxo de Comunicação Simplificado
+            </h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                O projeto demonstra a comunicação de clientes e dispositivos IoT através de serviços essenciais, roteados pelo Servidor Windows.
+            </p>
+
+            <div class="bg-gray-100 p-8 rounded-xl shadow-inner border border-gray-200">
+                <div class="text-left space-y-4">
+                    <p class="text-lg font-semibold text-gray-700 flex items-center">
+                        <span class="text-accent font-bold text-2xl mr-3">1.</span>
+                        <span class="font-mono bg-gray-200 p-1 rounded">Cliente/Notebook</span>
+                        <span class="mx-3 text-sm text-gray-500">→</span>
+                        Conecta-se primariamente via Wi-Fi (Roteador AP) e recebe IP do <span class="font-mono bg-blue-200 p-1 rounded">Windows Server (DHCP)</span>.
+                    </p>
+                    <hr class="border-gray-300">
+                    <p class="text-lg font-semibold text-gray-700 flex items-center">
+                        <span class="text-accent font-bold text-2xl mr-3">2.</span>
+                        <span class="font-mono bg-gray-200 p-1 rounded">Resolução de Nomes</span>
+                        <span class="mx-3 text-sm text-gray-500">→</span>
+                        Utiliza o <span class="font-mono bg-blue-200 p-1 rounded">Windows Server (DNS)</span> para consultas.
+                    </p>
+                    <hr class="border-gray-300">
+                    <p class="text-lg font-semibold text-gray-700 flex items-center">
+                        <span class="text-accent font-bold text-2xl mr-3">3.</span>
+                        <span class="font-mono bg-gray-200 p-1 rounded">Acesso IoT</span>
+                        <span class="mx-3 text-sm text-gray-500">→</span>
+                        Clientes acessam <span class="font-mono bg-green-200 p-1 rounded">Arduino</span> (LAN) e <span class="font-mono bg-purple-200 p-1 rounded">ESP32</span> (Wi-Fi) para visualizar suas páginas HTTP.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto text-center text-sm opacity-75">
+            <p>&copy; 2024 Projeto de Redes de Computadores - UEG. Desenvolvido por Jéssica e Wellington.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
