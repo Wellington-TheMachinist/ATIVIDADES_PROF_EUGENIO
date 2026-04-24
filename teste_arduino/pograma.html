@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Controle do Robô</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    font-family: Arial;
+    text-align:center;
+    margin-top:40px;
+}
+
+input{
+    width:80px;
+    padding:5px;
+    margin:5px;
+}
+
+
+#log{
+    width:700px;
+    height:200px;
+    border:1px solid black;
+    margin:auto;
+    overflow:auto;
+    text-align:left;
+    padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Controle do Robô</h2>
+
+
+<input type="button" onclick="connect()" value="SELECIONAR PORTA" class="button">
+
+<br><br>
+
+X: <input id="x" value="0">
+Y: <input id="y" value="0">
+Z: <input id="z" value="-200">
+
+<br>
+
+
+<input type="button" onclick="send()" value="ENVIAR COORDENADAS" class="button">
+
+<h3>Log Serial</h3>
+<div id="log"></div>
+
+<script src="pograma.js"></script>
+
+</body>
+</html>

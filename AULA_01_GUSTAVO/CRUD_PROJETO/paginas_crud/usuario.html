@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POGRAMA</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+</head>
+<body>
+   
+    <div class="container">
+        <h2 class="h2">SISTEMA DE GERENCIAMENTO ALMOXARIFADO <br><br>
+        USUÁRIOS</h2>
+        <div class="caixa-input">
+            <h3 class="h3">GERENCIAR USUARIOS</h3>
+            <input type="number" name="" id="usuario_id" placeholder="ID" class="caixa-texto-id"step="0.01" min="0"><br>
+            <input type="text" name="" id="usuario_nome" placeholder="Digite o nome do usuário" class="caixa-texto" step="0.01" min="0"><br>
+            <input type="text" name="" id="usuario_login" placeholder="Digite login do usuario" class="caixa-texto"step="0.01" min="0">
+            <input type="text" name="" id="usuario_senha" placeholder="Digite a senha do usuario" class="caixa-texto"step="0.01" min="0">
+            <div style="margin: auto; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <h3 class="h3">NIVEL DE ACESSO DO USUARIO</h3>    
+            <label for="radio_usuario">USUÁRIO</label>
+            <input type="radio" id="" name="radio_usuario" value="usuario" checked="checked">
+            <label for="adm">ADMINISTRADOR</label>
+            <input type="radio" id="" name="radio_usuario" value="adm"><br><br>
+
+            </div>
+            
+        </div>
+        <div class="caixa-botao">
+            <input type="button" value="SALVAR" id="usuario_btnEnviar" class="botao" >
+            <input type="button" value="LISTAR" id="usuario_btnConsultar" class="botao" >
+            <input type="button" value="ALTERAR" id="usuario_btnAlterar" class="botao" >
+            <input type="button" value="CANCELAR" id="usuario_btnCancelar" class="botao" ondblclick="cancelar()">
+        </div>
+         <div class="caixa-input">
+           
+            
+            
+            <p id="usuario_lista" class="amostragem"></p>
+            </div>
+
+
+            <a class="a"   href="../pagina_principal/index.html">VOLTAR PARA PÁGINA PRINCIPAL</a><br><br>
+            
+        </div>
+    </div>
+    <script src="../backend/usuario.js"></script>
+</body>
+</html>

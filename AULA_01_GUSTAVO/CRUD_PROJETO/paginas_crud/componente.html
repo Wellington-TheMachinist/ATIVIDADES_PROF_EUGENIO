@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPONENTES</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+      <link rel="stylesheet" href="../estilo/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+</head>
+<body>
+      
+    <div class="container">
+        <h2 class="h2">SISTEMA DE GERENCIAMENTO ALMOXARIFADO <br><br>
+        COMPONENTES</h2>
+        <div class="caixa-input">
+            <h3 class="h3">GERENCIAR COMPONENTES</h3>
+            <input type="number" name="" id="componente_id" placeholder="ID" class="caixa-texto-id"step="0.01" min="0"><br>
+            <input type="text" name="" id="componente_nome" placeholder="Digite o nome do componente" class="caixa-texto" step="0.01" min="0"><br>
+            <input type="text" name="" id="componente_descricao" placeholder="Descrição do componente" class="caixa-texto"step="0.01" min="0">
+            
+            
+        </div>
+        <div class="caixa-botao">
+            <input type="button" value="SALVAR" id="componente_btnEnviar" class="botao" >
+            <input type="button" value="LISTAR" id="componente_btnConsultar" class="botao" >
+            <input type="button" value="ALTERAR" id="componente_btnAlterar" class="botao" >
+            <input type="button" value="CANCELAR" id="componente_btnCancelar" class="botao" ondblclick="cancelar()">
+        </div>
+         <div class="caixa-input">
+           
+            
+            
+            <p id="componente_lista" class="amostragem"></p>
+            </div>
+
+
+            <a class="a"   href="../pagina_principal/index.html">VOLTAR PARA PÁGINA PRINCIPAL</a><br><br>
+            
+        </div>
+    </div>
+    <script src="../backend/componente.js"></script>
+</body>
+</html>

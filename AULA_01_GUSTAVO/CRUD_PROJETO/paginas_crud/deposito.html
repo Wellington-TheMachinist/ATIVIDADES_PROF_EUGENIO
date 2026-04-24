@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPÓSITO</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="stylesheet" href="../estilo/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h2 class="h2">SISTEMA DE GERENCIAMENTO ALMOXARIFADO
+            <br><br>
+            GERENCIAMENTO DE DEPÓSITOS
+        </h2>
+        <div class="caixa-input">
+            <h3 class="h3">GERENCIAR USUARIOS</h3>
+            <input type="number" name="" id="deposito_id" placeholder="ID" class="caixa-texto-id"step="0.01" min="0"><br>
+            <input type="text" name="" id="deposito_nome" placeholder="Digite o nome do depósito" class="caixa-texto" step="0.01" min="0"><br>
+            <div style="margin: auto; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            
+
+            </div>
+            
+        </div>
+        <div class="caixa-botao">
+            <input type="button" value="SALVAR" id="deposito_btnEnviar" class="botao" >
+            <input type="button" value="LISTAR" id="deposito_btnConsultar" class="botao" >
+            <input type="button" value="ALTERAR" id="deposito_btnAlterar" class="botao" >
+            <input type="button" value="CANCELAR" id="deposito_btnCancelar" class="botao" onclick="cancelar()">
+        </div>
+         <div class="caixa-input">
+           
+            
+            
+            <p id="deposito_lista" class="amostragem"></p>
+            </div>
+
+
+            <a class="a"   href="../pagina_principal/index.html">VOLTAR PARA PÁGINA PRINCIPAL</a><br><br>
+            
+        </div>
+    </div>
+    
+</body>
+
+<script src="../backend/deposito.js"></script>
+</html>

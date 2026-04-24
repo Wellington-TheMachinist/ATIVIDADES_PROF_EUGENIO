@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">ALGORITMO GENÉTICO</h1><hr>
+<style>
+.container {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+.box {
+  background: rgb(0, 0, 0);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
+.botao {
+  background: rgb(0, 0, 0);
+  margin: 20px;
+  
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  width: 80px;
+  height: 40px;
+}
+</style>
+
+<div class="container">    
+  <div class="box" style="width: 900px;">
+    <p>LINHAS E COLUNAS QUE A MATRIZ A POSSUI:</p>
+    <h3>CROMOSSOMOS <input type="number" id="linhaMatrizA"> GENES <input type="number" id="colunaMatrizA"></h3>
+    
+     <input type="button" value="GERAR POPULAÇÃO" onclick="acaoMostrarDadosMatrizA()">
+     
+ 
+     <div class="box">
+    <p id="matrizA" style="background-color: whitesmoke;color: rgb(0, 0, 0);"></p>
+    
+     </div>
+    <p>PONTO DE CORTE ></p>
+    <p id="idOutPonto"></p>
+    <p id="idOutResultado"></p>
+   
+     <div class="container" >
+        
+        <input type="button"  value="CRUZAMENTO DE DOIS CROMOSSOMOS" onclick="acaoMostrarMatrizSoma()">
+        
+     </div>
+
+    <div>
+        <p id="matrizA_T"style="background-color: red;color: aliceblue;margin: 30px;"></p>
+        <p id="matrizB_T"style="background-color: red;color: aliceblue;margin: 30px;"></p>
+        <p id="idOutPonto"></p>
+       
+        
+    </div>
+        
+   
+
+</div>
+
+
+</div><hr>
+
+
+
+    
+
+    <script src="pograma.js"></script>
+</body>
+</html>

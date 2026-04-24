@@ -1,0 +1,9 @@
+@media screen and (min-width: 250px) {
+  
+   
+button{
+    box-sizing:border-box;
+    width: 100%;
+    max-width: 100%;
+}
+  }

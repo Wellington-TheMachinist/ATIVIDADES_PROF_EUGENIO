@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 25px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.input-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"], button {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Container de Input das Matrizes */
+#matriz-input-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.matriz-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.input-control {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.matriz-display {
+    white-space: pre;
+    font-family: monospace;
+    font-size: 1.1em;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px dashed #ced4da;
+    min-height: 80px;
+    overflow-x: auto;
+}
+
+.index-info {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Resultados */
+#resultados-section button {
+    margin-bottom: 15px;
+}
+
+.resultados-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.resultado-box {
+    padding: 15px;
+    border: 1px solid #17a2b8;
+    border-radius: 8px;
+    background-color: #e6f7ff;
+}
+
+.resultado-box pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    background-color: #cceeff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.resultado-box h3 {
+    color: #17a2b8;
+}

@@ -1,0 +1,43 @@
+.container{
+
+display: flex;
+background-color: aquamarine;
+gap: 2rem;
+height: 60rem;
+flex-direction: column;
+/*flex-wrap: wrap;*/
+/*flex-flow: row wrap;*/
+
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+.caixa-texto{
+width: 40rem;
+height: 12rem;
+background-color: blueviolet;
+display: flex;
+justify-content: center;
+align-items: center;
+color: aliceblue;
+font-size: 4.5rem;
+border-radius: 2rem;
+font-family: fantasy;
+
+}
+
+.botao{
+
+width: 40rem;
+height: 12rem;
+background-color: blueviolet;
+display: flex;
+justify-content: center;
+align-items: center;
+color: aliceblue;
+font-size: 4.5rem;
+border-radius: 2rem;
+font-family: fantasy;
+}
+

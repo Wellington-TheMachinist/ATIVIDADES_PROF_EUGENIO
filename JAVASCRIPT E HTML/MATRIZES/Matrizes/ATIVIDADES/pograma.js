@@ -96,3 +96,4 @@ console.log("SUBTRAÇÃO DAS MATRIZES: ");
 matrizC.gerarMatrizSubtracao(matrizA.matriza,matrizB.matriza);
 console.log(matrizC.mostrarMatriz());
 
+

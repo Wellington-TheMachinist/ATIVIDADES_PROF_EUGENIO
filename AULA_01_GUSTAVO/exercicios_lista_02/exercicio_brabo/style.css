@@ -1,0 +1,107 @@
+
+.container{
+
+display: flex;
+background-color: aquamarine;
+
+height: 85rem;
+flex-direction: column;
+/*flex-wrap: wrap;*/
+/*flex-flow: row wrap;*/
+
+justify-content:space-evenly;
+align-items: center;
+
+}
+
+.caixa-input{
+
+width: 40rem;
+height: 20rem;
+background-color: blueviolet;
+display: flex;
+justify-content: center;
+align-items: center;
+color: aliceblue;
+border-radius: 2rem;
+flex-direction: column;
+max-width: 100%;
+
+}
+
+.caixa-texto{
+box-sizing: border-box;
+width: 35rem;
+height: 3rem;
+border-radius: 2rem;
+font-size: 1.4rem;
+justify-content:space-around;
+background-color: aliceblue;
+max-width: 100%;
+
+}
+
+.caixa-texto-id{
+box-sizing: border-box;
+width: 5rem;
+height: 3rem;
+border-radius: 2rem;
+font-size: 1.4rem;
+justify-content:left;
+background-color: aliceblue;
+max-width: 100%;
+
+}
+
+.caixa-botao{
+max-width: 100%;    
+width: 40rem;
+height: 12rem;
+background-color: blueviolet;
+display: flex;
+justify-content: space-around;
+align-items: center;
+gap: 2rem;
+border-radius: 2rem;
+flex-direction: row;
+}
+
+.botao{
+width: 8rem;
+height: 4rem;
+background-color: blueviolet;
+justify-content: center;
+align-items: center;
+color: aliceblue;
+font-size: 1rem;
+border-radius: 1rem;
+font-family: fantasy;
+}
+
+.paragrafo{
+    max-width: 100%;
+width: 38rem;
+height: 4rem;
+background-color: blueviolet;
+text-align: center;
+justify-content: center;
+align-items: center;
+color: aliceblue;
+font-size: 2rem;
+border-radius: 2rem;
+font-family: fantasy;
+}
+
+.amostragem{
+    max-width: 100%;
+width: 38rem;
+height: 4rem;
+background-color: blueviolet;
+text-align: center;
+
+align-items: center;
+color: aliceblue;
+font-size: 1rem;
+border-radius: 2rem;
+font-family: fantasy;
+}

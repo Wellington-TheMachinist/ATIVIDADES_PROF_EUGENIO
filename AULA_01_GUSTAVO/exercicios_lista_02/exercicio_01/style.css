@@ -1,0 +1,44 @@
+
+.container{
+
+display: flex;
+background-color: aquamarine;
+gap: 2rem;
+height: 20rem;
+/*flex-direction: row;*/
+/*flex-wrap: wrap;*/
+/*flex-flow: row wrap;*/
+
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+.item{
+
+width: 5rem;
+height: 5rem;
+background-color: blueviolet;  
+align-self: auto; 
+flex-basis: 20rem; 
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.item-2{
+
+
+}
+
+.item-4{
+
+/*flex-grow: 3;*/
+width: 5rem;
+height: 5rem;
+background-color: blueviolet;  
+align-self: auto; 
+flex-basis: 20rem; 
+flex-shrink: 5;
+}

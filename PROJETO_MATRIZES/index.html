@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">ALGORITMO DE MATRIZES</h1><hr>
+<style>
+.container {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+}
+
+.box {
+  background: rgb(0, 0, 0);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
+.botao {
+  background: rgb(0, 0, 0);
+  margin: 20px;
+  
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  width: 80px;
+  height: 40px;
+}
+
+.botao2 {
+  background: rgb(222, 4, 4);
+  margin: 20px;
+  
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  width: 150px;
+  height: 40px;
+}
+</style>
+
+<div class="container">    
+  <div class="box" style="width: 900px;">
+    <p>LINHAS E COLUNAS QUE A MATRIZ A POSSUI:</p>
+    <h3>LINHAS <input type="number" id="linhaMatrizA"> COLUNAS <input type="number" id="colunaMatrizA"></h3>
+    <p>LINHAS E COLUNAS QUE A MATRIZ B POSSUI:</p>
+    <h3>LINHAS <input type="number" id="linhaMatrizB"> COLUNAS <input type="number" id="colunaMatrizB"></h3>
+   
+     
+     <input type="button" class="botao2" value="GERAR MATRIZ A" onclick="acaoMostrarDadosMatrizA()">
+     <input type="button" class="botao2" value="GERAR MATRIZ B" onclick="acaoMostrarDadosMatrizB()">
+     
+  <div class="container">
+     <div class="box">
+    <p id="matrizA" style="background-color: red;color: aliceblue;"></p>
+    
+     </div>
+    <div class="box">
+    <p id="matrizB" style="background-color: red;color: aliceblue;"></p>
+    
+    </div>
+     </div>
+     <div class="container" >
+        <input type="button" class="botao" value="TA" onclick="acaoMostrarTranspostaA()">
+        <input type="button" class="botao" value="TB" onclick="acaoMostrarTranspostaB()">
+        <input type="button" class="botao" value="TA+TB" onclick="acaoMostrarMatrizTranspostaSoma()">
+        <input type="button" class="botao" value="A+B" onclick="acaoMostrarMatrizSoma()">
+        <input type="button" class="botao" value="A-B" onclick="acaoMostrarMatrizSubtracao()">
+     </div>
+
+    <div>
+        <p id="idOutA_T"style="background-color: red;color: aliceblue;margin: 30px;"></p>
+        <p id="idOutB_T"style="background-color: red;color: aliceblue;margin: 30px;"></p>
+        <p id="idOutResultado"style="background-color: red;color: aliceblue;margin: 30px;"></p>
+       
+        
+    </div>
+        
+   
+
+</div>
+
+
+</div><hr>
+
+
+
+    
+
+    <script src="programa.js"></script>
+</body>
+</html>

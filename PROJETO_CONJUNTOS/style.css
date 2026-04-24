@@ -1,0 +1,137 @@
+/*
+ * ----------------------------------------
+ * 1. Estilos Gerais e Fundo
+ * ----------------------------------------
+ */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Azul claro suave */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+ * ----------------------------------------
+ * 2. Títulos e Estrutura Principal
+ * ----------------------------------------
+ */
+h1 {
+    color: #cc2900; /* Azul vibrante */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #00ccb8;
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center; 
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+p {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #b3cde0;
+    border-radius: 6px;
+    margin-right: 10px;
+    width: 100px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+    outline: none;
+}
+
+input[type="button"] {
+    background-color: #00994c; /* Verde para ação */
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type="button"]:hover {
+    background-color: #006633;
+    transform: translateY(-1px);
+}
+
+/* Estilo específico para o botão EXECUTAR */
+input[value="EXECUTAR"] {
+    background-color: #ff8c00; /* Laranja para destaque */
+    padding: 12px 30px;
+    font-size: 1.2em;
+}
+
+input[value="EXECUTAR"]:hover {
+    background-color: #cc6f00;
+}
+
+p:nth-child(even) {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+#idOutConjuntoA, #idOutConjuntoB {
+    min-height: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    color: #444;
+    display: inline-block;
+    width: auto;
+    max-width: 90%;
+}
+
+
+#idOutConjuntoVazio {
+    font-style: italic;
+    color: #999;
+    line-height: 1.5;
+}
+
+
+#idOutResultado {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #0077cc;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed #b3cde0;
+    background-color: #e6f3ff;
+    border-radius: 8px;
+    min-height: 30px;
+}

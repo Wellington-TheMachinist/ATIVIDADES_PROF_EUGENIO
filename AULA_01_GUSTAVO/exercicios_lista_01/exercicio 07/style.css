@@ -1,0 +1,14 @@
+html{
+    font-size: 20px;
+}
+h1{
+    font-size: 2.5rem;/*O H1 TERÁ SUA FONTE O TAMANHO DE 40PX */
+}
+
+h2{
+    font-size: 2rem;/*O H2 TERÁ SUA FONTE O TAMANHO DE 32PX */
+}
+
+h3{
+    font-size: 1.5rem;/*O H1 TERÁ SUA FONTE O TAMANHO DE 24PX */
+}

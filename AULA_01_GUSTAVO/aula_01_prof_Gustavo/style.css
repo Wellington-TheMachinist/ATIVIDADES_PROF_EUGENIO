@@ -1,0 +1,25 @@
+
+
+.padrao{
+    width: 10rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: content-box;
+    padding: 3rem;
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 1.2rem auto;
+    border-radius: 20px;
+}
+.botao{
+    width: 6rem;
+    height: 3rem;
+    background-color: blue;
+    color: aliceblue;
+    align-items: center;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    border: 0cap;
+}
+
