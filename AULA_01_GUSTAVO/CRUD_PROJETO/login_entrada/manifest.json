@@ -1,0 +1,16 @@
+{
+  "short_name": "TM-DR1",
+  "name": "ROBO DELTA",
+  "description": "App para testar biometria do celular",
+  "icons": [
+    {
+      "src": "./kurumi.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "login.html",
+  "display": "standalone",
+  "background_color": "#2d3436",
+  "theme_color": "#0984e3"
+}

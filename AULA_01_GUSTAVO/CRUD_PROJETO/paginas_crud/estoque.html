@@ -1,52 +1,39 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTOQUE</title>
     <link rel="stylesheet" href="../estilo/style.css">
-      <link rel="stylesheet" href="../estilo/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
 </head>
 <body>
-    
     <div class="container">
-        <h2 class="h2">SISTEMA DE GERENCIAMENTO ALMOXARIFADO <br><br>
-        GERENCIAMENTO DE ESTOQUE
-        </h2>
+        <h2 class="h2">GERENCIAMENTO DE ESTOQUE</h2>
         <div class="caixa-input">
-            <h3 class="h3">GERENCIAR ESTOQUE</h3>
-            <div>
-            <input type="number" name="" id="estoque_id" placeholder="ID" class="caixa-texto-id"step="0.01" min="0"><br>
-            <input type="number" id="estoque_id_componente" placeholder="ID componente" class="caixa-texto-id"step="0.01" min="0"><br>
-            <input type="number" id="estoque_id_deposito" placeholder="ID deposito" class="caixa-texto-id"step="0.01" min="0"><br>
-            <input type="number" id="estoque_quant_comp" placeholder="qt. componente" class="caixa-texto-id"step="0.01" min="0"><br>
-            <input id="estoque_quant_comp" type="number">
-            </div>
+            <input type="number" id="estoque_id" placeholder="ID (para alteração)" class="caixa-texto-id"><br>
             
-
-            </div>
+            <label>Componente:</label>
+            <select id="estoque_id_componente" class="caixa-texto"></select><br>
             
+            <label>Depósito:</label>
+            <select id="estoque_id_deposito" class="caixa-texto"></select><br>
+            
+            <input type="number" id="estoque_quant_comp" placeholder="Quantidade" class="caixa-texto">
+        </div>
         
         <div class="caixa-botao">
-            <input type="button" value="SALVAR" id="estoque_btnEnviar" class="botao" >
-            <input type="button" value="LISTAR" id="estoque_btnConsultar" class="botao" >
-            <input type="button" value="ALTERAR" id="estoque_btnAlterar" class="botao" >
-            <input type="button" value="CANCELAR" id="estoque_btnCancelar" class="botao" ondblclick="cancelar()">
+            <input type="button" value="SALVAR" id="estoque_btnEnviar" class="botao">
+            <input type="button" value="LISTAR" id="estoque_btnConsultar" class="botao">
+            <input type="button" value="ALTERAR" id="estoque_btnAlterar" class="botao">
         </div>
-         <div class="caixa-input">
-           
-            
-            
+
+        <div class="caixa-input">
             <p id="estoque_lista" class="amostragem"></p>
-            </div>
-
-
-            <a class="a"   href="../pagina_principal/index.html">VOLTAR PARA PÁGINA PRINCIPAL</a><br><br>
-            
         </div>
+        <a class="a" href="../pagina_principal/index.html">VOLTAR</a>
     </div>
     <script src="../backend/estoque.js"></script>
-</body>
 </body>
 </html>

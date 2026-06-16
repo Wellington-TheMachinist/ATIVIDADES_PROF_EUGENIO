@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gerenciamento de Almoxarifado</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="../estilo/style.css">
+    
+    <!-- ADICIONE ESTA LINHA ABAIXO (Importante: sem o 'defer' para garantir a carga antes) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+    
+    <!-- Seu script agora reconhecerá o initSqlJs -->
+    <script src="pog.js" defer></script>
 </head>
 <body>
-    <h1> SISTEMA DE GERENCIAMENTO DE ALMOXARIFADO</h1>
-
-    <div>
-        <form>
-            <p>LOGIN:<input type="text"></p>
-            <p>SENHA:<input type="password"></p>
-            <input type="button" value="ENTRAR">
-        </form>
+    <div class="container" style="height: 50rem;">
+        <h1 style="text-align: center;"> SISTEMA DE GERENCIAMENTO DE ALMOXARIFADO</h1>
+        <div class="loginDiv">
+            <form>
+                <p>LOGIN:<input type="text" id="usuario"></p>
+                <p>SENHA:<input type="password" id="senha"></p>
+                <input type="button" value="ENTRAR" id="btnLogin">
+                <button type="button" id="btnBiometria">Entrar com BIOMETRIA</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

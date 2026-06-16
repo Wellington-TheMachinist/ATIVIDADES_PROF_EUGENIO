@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POGRAMA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>-->
+</head>
+<body>
+   
+    <div class="container">
+        
+        <div class="caixa-input">
+            <p class="paragrafo">LOG DE MANUTENÇÃO PREVENTIVA CHEVROLET ONIX</p>
+            <input type="number" name="" id="textoId" placeholder="ID" class="caixa-texto-id"step="0.01" min="0"><br>
+            <input type="text" name="" id="textoItem" placeholder="Digite o nome do item" class="caixa-texto" step="0.01" min="0"><br>
+            <input type="text" name="" id="textoValor" placeholder="Digite o valor da manutenção (R$)" class="caixa-texto"step="0.01" min="0">
+            <input type="text" name="" id="textoDono" placeholder="Digite o nome do dono" class="caixa-texto" step="0.01" min="0"><br>
+
+        </div>
+        <div class="caixa-botao">
+            <input type="button" value="SALVAR" id="btnEnviar" class="botao" >
+            <input type="button" value="LISTAR" id="btnConsultar" class="botao" >
+            <input type="button" value="ALTERAR" id="btnAlterar" class="botao" >
+            <input type="button" value="EXCLUIR" id="btnExcluir" class="botao" ondblclick="excluir()">
+        </div>
+         <div class="caixa-input">
+           
+            
+            
+            <p id="textoH" class="amostragem"></p>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@ const config = {
 
 
 let meuBanco;
-
+/*
 async function carregarOuCriarBanco() {
     
 const SQL = await initSqlJs(config);
@@ -37,6 +37,70 @@ if(bancoSalvo){
 
 
   return db;
+}
+  */
+
+async function carregarOuCriarBanco() {
+    const SQL = await initSqlJs(config);
+
+    const bancoSalvo = localStorage.getItem("almoxarifado_db");
+    let db;
+
+    if (bancoSalvo) {
+        const u8 = new Uint8Array(JSON.parse(bancoSalvo));
+        db = new SQL.Database(u8);
+        console.log("BANCO DE DADOS RESTAURADO!");
+    } else {
+        db = new SQL.Database();
+
+        // Ativar suporte a chaves estrangeiras
+        db.run("PRAGMA foreign_keys = ON;");
+
+        // Criação das tabelas com vínculos
+        db.run(`
+          CREATE TABLE usuario (
+            id INTEGER PRIMARY KEY,
+            nome TEXT,
+            login TEXT,
+            nivel_acesso TEXT,
+            senha TEXT
+          );
+        `);
+
+        db.run(`
+          CREATE TABLE componente (
+            id INTEGER PRIMARY KEY,
+            componente TEXT,
+            descricao TEXT,
+            id_usuario INTEGER,
+            img_diretorio TEXT,
+            FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+          );
+        `);
+
+        db.run(`
+          CREATE TABLE deposito (
+            id INTEGER PRIMARY KEY,
+            nome TEXT,
+            descricao TEXT
+          );
+        `);
+
+        db.run(`
+          CREATE TABLE estoque (
+            id INTEGER PRIMARY KEY,
+            id_componente INTEGER,
+            id_deposito INTEGER,
+            quant_componente INTEGER,
+            FOREIGN KEY (id_componente) REFERENCES componente(id),
+            FOREIGN KEY (id_deposito) REFERENCES deposito(id)
+          );
+        `);
+
+        console.log("Novo banco de dados criado!");
+    }
+
+    return db;
 }
 
 

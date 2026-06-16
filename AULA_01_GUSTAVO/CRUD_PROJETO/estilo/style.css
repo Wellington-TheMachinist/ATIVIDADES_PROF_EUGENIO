@@ -76,6 +76,7 @@ color: aliceblue;
 font-size: 1rem;
 border-radius: 1rem;
 font-family: fantasy;
+max-width: 100%;
 }
 
 .h3{
@@ -99,9 +100,56 @@ font-family: fantasy;
 .a{
     width: 60rem;
     height: 3rem;
-    background-color: lightseagreen;
+    background-color: skyblue;
     border-radius: 1rem;
     color: white;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar{
+    max-width: 100%;
+    width: 80rem;
+     height: 5rem; 
+     background-color: skyblue; 
+     text-align: center;
+     justify-content: space-around;
+     border: 1rem;
+    
+}
+.navcontent{
+justify-content: space-around;
+font-size: 3rem;
+max-width: 100%;
+}
+
+.inicial{
+
+display: flex;
+background-color: skyblue;
+
+height: 35rem;
+flex-direction: column;
+/*flex-wrap: wrap;*/
+/*flex-flow: row wrap;*/
+
+justify-content:flex-start;
+align-items: center;
+
+}
+
+@media only screen and (max-width: 620px) {
+  .navcontent{
+    font-size: 1rem; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+.loginDiv{
+ margin: auto;
+ justify-content: center;
+ align-items: center;
+ display: flex;background-color: aqua;
+ width: 25rem;
+ height: 15rem;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ max-width: 100%;
 }
